@@ -9,7 +9,7 @@ TypeScript bindings around a WebAssembly-compiled Z3, mimicking the [Z3 C Api](h
 * Prerequisites:	[emscripten](https://github.com/kripken/emscripten), [nodejs](https://nodejs.org/en/), [TypeScript](https://www.typescriptlang.org/)
 * Clone Repo. Don't forget to add --recursive to get z3 as a submodule.
 ```
-git clone --recursive git@bitbucket.org:dbounov/z3.ts.git
+git clone --recursive https://github.com/d1m0/z3.ts.git
 ```
 * Assuming the repo root directory is $REPO, run `$REPO/setup.sh`. This script will
     * Configure the z3 build to use Emscripten
