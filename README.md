@@ -6,7 +6,7 @@ TypeScript bindings around a WebAssembly-compiled Z3, mimicking the [Z3 C Api](h
 
 ### How do I get set up? ###
 
-* The following steps work best on a *Linux* machine (for example, on Debian-based distribution).
+* The following steps work best on a *Linux* machine (for example, on a Debian-based distribution).
 * More prerequisites:	[emscripten](https://github.com/kripken/emscripten), [nodejs](https://nodejs.org/en/), [TypeScript](https://www.typescriptlang.org/)
 * Clone Repo. Don't forget to add --recursive to get z3 as a submodule.
 ```
