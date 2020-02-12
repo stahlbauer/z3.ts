@@ -1,5 +1,30 @@
 #! /usr/bin/env bash
 
+sudo apt-get -y -q install git build-essential lzip python2.7 cmake autoconf libtool
+
+# Dependency: NodeJs
+if ! [ -x "$(command -v npm)" ]; then
+  curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+  exit 1
+fi
+
+# Dependency: TypeScript
+if ! [ -x "$(command -v tsc)" ]; then
+  sudo npm install -g typescript
+fi
+
+# Dependency: EMSCRIPTEN
+EMSDK_ROOT="./emscripten"
+if ! [ -x "$(command -v emconfigure)" ]; then
+    git clone --depth 1 https://github.com/emscripten-core/emsdk.git "$EMSDK_ROOT"
+    cd $EMSDK_ROOT
+    ./emsdk install latest
+    ./emsdk activate latest
+    source ./emsdk_env.sh
+    cd ..
+fi
+
 # 1. make sure we have the required tools
 function check_has {
   NAME=$1
