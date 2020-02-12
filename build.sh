@@ -1,5 +1,7 @@
 #! /usr/bin/env bash
 
+source ./emscripten/emsdk_env.sh
+
 function check_has {
   NAME=$1
   MSG=$2
