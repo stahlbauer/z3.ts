@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "description": "",
   "devDependencies": {
-    "typescript": "^2.8",
-    "types": "*"
+    "types": "*",
+    "typescript": "^2.9.2"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
