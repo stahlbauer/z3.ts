@@ -16,14 +16,16 @@ fi
 
 # Dependency: EMSCRIPTEN
 EMSDK_ROOT="./emscripten"
-if ! [ -x "$(command -v emconfigure)" ]; then
+if [ ! -d $EMSDK_ROOT ]; then
     git clone --depth 1 https://github.com/emscripten-core/emsdk.git "$EMSDK_ROOT"
     cd $EMSDK_ROOT
     ./emsdk install latest
     ./emsdk activate latest
-    source ./emsdk_env.sh
-    cd ..
+elif
+    cd $EMSDK_ROOT
 fi
+source ./emsdk_env.sh
+cd ..
 
 # 1. make sure we have the required tools
 function check_has {
