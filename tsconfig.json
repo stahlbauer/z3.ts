@@ -5,6 +5,7 @@
     "noImplicitAny": false,
     "noLib": false,
     "outDir": "build",
+    "lib": ["es6", "dom"],                      
     "preserveConstEnums": true,
     "removeComments": true,
     "rootDir": ".",
