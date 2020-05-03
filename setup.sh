@@ -21,9 +21,10 @@ if [ ! -d $EMSDK_ROOT ]; then
     cd $EMSDK_ROOT
     ./emsdk install latest
     ./emsdk activate latest
-elif
+else
     cd $EMSDK_ROOT
 fi
+
 source ./emsdk_env.sh
 cd ..
 
