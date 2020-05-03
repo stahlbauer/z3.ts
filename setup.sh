@@ -1,5 +1,8 @@
 #! /usr/bin/env bash
 
+git submodule init
+git submodule update --recursive --remote
+
 sudo apt-get -y -q install git build-essential lzip python2.7 cmake autoconf libtool
 
 # Dependency: NodeJs
